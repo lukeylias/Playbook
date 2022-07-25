@@ -92,12 +92,10 @@ const App = ({}) => {
                     </Stack>
 
                     <Divider />
-
-                    <Heading size="sm">Links</Heading>
                     <Box bg="#F9FBFC" borderRadius="lg" p={3} align="stretch">
                         <Stack spacing={2}>
                             <Link color="discord.500" href={link} isExternal>
-                                Watch video demo
+                                Learn how the plugin works
                             </Link>
                         </Stack>
                     </Box>
