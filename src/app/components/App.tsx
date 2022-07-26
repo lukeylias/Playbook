@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import {Button} from '@chakra-ui/button';
-import {Divider, Flex, Stack, VStack, HStack, Spacer} from '@chakra-ui/layout';
+import {Divider, Flex, Stack, VStack, HStack, Spacer, Container} from '@chakra-ui/layout';
 import {Radio, RadioGroup} from '@chakra-ui/radio';
 import {Select} from '@chakra-ui/select';
 import {FormControl, FormLabel} from '@chakra-ui/form-control';
@@ -21,6 +21,7 @@ const MAP = {
     emptyState: {
         ios: 'https://iili.io/hcawFf.png',
         android: 'https://iili.io/hcah6G.png',
+        web: 'https://iili.io/8SC2ON.png',
         copy: 'emptyState copy',
     },
 };
@@ -43,18 +44,8 @@ const App = ({}) => {
     //
     // here we will send a message to controller.ts
     //
-    // const twoCalls = (e) => {
-    //     setPattern(e.target.value);
-    //     console.log('pattern changed', e.target.value);
-
-    //     // const newImage = MAP[e.target.value][platform];
-    //     // setImage(newImage);
-    //     // console.log('image changed', newImage);
-    // };
 
     const onCreate = () => {
-        // const newImage = MAP[pattern][platform];
-        // setImage(newImage);
         console.log('image changed');
     };
 
@@ -62,8 +53,9 @@ const App = ({}) => {
     // ui elements
     //
     return (
-        <HStack h="100%">
-            <Flex h="100%" w="40%" p={4}>
+        <Flex h="100%">
+            {/* Left panel */}
+            <Flex h="100%" minW={'360px'} p={4}>
                 <VStack w="100%" spacing={6} align="stretch">
                     <FormControl>
                         <FormLabel>Platform</FormLabel>
@@ -82,7 +74,7 @@ const App = ({}) => {
                         <FormLabel>Pattern</FormLabel>
                         <Select size="sm" onChange={(e) => setPattern(e.target.value)}>
                             <option value="default">Default</option>
-                            <option value="emptyState">Empty state</option>
+                            <option value="emptyState">Log in</option>
                         </Select>
                     </FormControl>
 
@@ -106,12 +98,13 @@ const App = ({}) => {
                 </VStack>
             </Flex>
 
-            <Flex w="100%" h="100%" p={4} bg="#F9FBFC">
-                <Center w="100%" h="100%">
-                    <Image h="712px" w="null" src={image} />
+            {/* Right panel */}
+            <Flex h="100%" w="100%" p={4} bg="#F9FBFC">
+                <Center w="100%">
+                    <Image objectFit="contain" h="712px" src={image} />
                 </Center>
             </Flex>
-        </HStack>
+        </Flex>
     );
 };
 
