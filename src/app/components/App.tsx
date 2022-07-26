@@ -15,21 +15,15 @@ const MAP = {
         ios: 'https://iili.io/hcaNa4.png',
         android: 'https://iili.io/hcaO8l.png',
         web: 'https://iili.io/NDcyDx.png',
+        copy: 'default copy',
     },
 
     emptyState: {
         ios: 'https://iili.io/hcawFf.png',
         android: 'https://iili.io/hcah6G.png',
+        copy: 'emptyState copy',
     },
 };
-
-//
-// values for content
-//
-// const CONTENT = {
-//     'd-content': 'This is default',
-//     'es-content': 'This is empty state'
-// }
 
 //
 // states and values
@@ -40,12 +34,27 @@ const App = ({}) => {
     const [image, setImage] = React.useState('https://iili.io/hcaNa4.png');
     const [link] = React.useState('https://www.youtube.com/watch?v=Zo_k6l6mwdo');
 
+    React.useEffect(() => {
+        const newImage = MAP[pattern][platform];
+        setImage(newImage);
+        console.log('updated from hook', pattern, platform);
+    }, [pattern, platform]);
+
     //
     // here we will send a message to controller.ts
     //
+    // const twoCalls = (e) => {
+    //     setPattern(e.target.value);
+    //     console.log('pattern changed', e.target.value);
+
+    //     // const newImage = MAP[e.target.value][platform];
+    //     // setImage(newImage);
+    //     // console.log('image changed', newImage);
+    // };
+
     const onCreate = () => {
-        const newImage = MAP[pattern][platform];
-        setImage(newImage);
+        // const newImage = MAP[pattern][platform];
+        // setImage(newImage);
         console.log('image changed');
     };
 
@@ -71,13 +80,7 @@ const App = ({}) => {
 
                     <FormControl>
                         <FormLabel>Pattern</FormLabel>
-                        <Select
-                            size="sm"
-                            onChange={(e) => {
-                                setPattern(e.target.value);
-                                console.log('Updating pattern', e.target.value);
-                            }}
-                        >
+                        <Select size="sm" onChange={(e) => setPattern(e.target.value)}>
                             <option value="default">Default</option>
                             <option value="emptyState">Empty state</option>
                         </Select>
@@ -85,10 +88,7 @@ const App = ({}) => {
 
                     <Stack spacing={4}>
                         <Heading size="sm">Info</Heading>
-                        <Text fontSize="md">
-                            Personalisation is just the beginning. With new accessibility guidelines and patterns, it’s
-                            easy to create beautiful, usable experiences.
-                        </Text>
+                        <Text fontSize="md">{MAP[pattern].copy || 'no copy'}</Text>
                     </Stack>
 
                     <Divider />
@@ -102,7 +102,7 @@ const App = ({}) => {
 
                     <Spacer />
 
-                    <Button onClick={onCreate}>Generate screen</Button>
+                    <Button onClick={onCreate}>Generate screens</Button>
                 </VStack>
             </Flex>
 
