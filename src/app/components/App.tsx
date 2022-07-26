@@ -45,6 +45,12 @@ const App = ({}) => {
     // here we will send a message to controller.ts
     //
 
+    const imageStyle = {
+        height: '716px',
+        width: 'auto',
+        maxWidth: 'unset',
+    };
+
     const onCreate = () => {
         console.log('image changed');
     };
@@ -55,7 +61,7 @@ const App = ({}) => {
     return (
         <Flex h="100%">
             {/* Left panel */}
-            <Flex h="100%" w="480px" maxW={'480px'} p={4}>
+            <Flex bg="#ffffff" h="100%" w="30vw" maxW={'30vw'} minW={'30vw'} p={4}>
                 <VStack w="100%" spacing={6} align="stretch">
                     <FormControl>
                         <FormLabel>Platform</FormLabel>
@@ -99,10 +105,8 @@ const App = ({}) => {
             </Flex>
 
             {/* Right panel */}
-            <Flex h="100%" w="100%" p={4} bg="#F9FBFC">
-                <Center w="100%">
-                    <Image objectFit="contain" h="712px" src={image} />
-                </Center>
+            <Flex bg="#F9FBFC" h="100%" w="70vw" p={6} overflowX={'scroll'} alignItems={'center'}>
+                <img style={imageStyle} src={image} />
             </Flex>
         </Flex>
     );
