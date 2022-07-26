@@ -12,17 +12,17 @@ import {Image, Text, Center, Link, Heading, Box, Icon} from '@chakra-ui/react';
 //
 const MAP = {
     default: {
-        ios: 'https://iili.io/hcaNa4.png',
-        android: 'https://iili.io/hcaO8l.png',
-        web: 'https://iili.io/NDcyDx.png',
-        copy: 'default copy',
+        ios: 'https://iili.io/84Dmv9.png',
+        android: 'https://iili.io/84DbY7.png',
+        web: 'https://iili.io/84b7aI.png',
+        copy: 'The dashboard shows all the customers accounts and is the home of the app.',
     },
 
     emptyState: {
         ios: 'https://iili.io/hcawFf.png',
-        android: 'https://iili.io/hcah6G.png',
+        android: 'https://iili.io/8SC2ON.png',
         web: 'https://iili.io/8SC2ON.png',
-        copy: 'emptyState copy',
+        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
     },
 };
 
@@ -32,7 +32,7 @@ const MAP = {
 const App = ({}) => {
     const [pattern, setPattern] = React.useState('default');
     const [platform, setPlatform] = React.useState('ios');
-    const [image, setImage] = React.useState('https://iili.io/hcaNa4.png');
+    const [image, setImage] = React.useState('https://iili.io/84DbY7.png');
     const [link] = React.useState('https://www.youtube.com/watch?v=Zo_k6l6mwdo');
 
     React.useEffect(() => {
@@ -55,7 +55,7 @@ const App = ({}) => {
     return (
         <Flex h="100%">
             {/* Left panel */}
-            <Flex h="100%" minW={'360px'} p={4}>
+            <Flex h="100%" w="480px" maxW={'480px'} p={4}>
                 <VStack w="100%" spacing={6} align="stretch">
                     <FormControl>
                         <FormLabel>Platform</FormLabel>
@@ -73,7 +73,7 @@ const App = ({}) => {
                     <FormControl>
                         <FormLabel>Pattern</FormLabel>
                         <Select size="sm" onChange={(e) => setPattern(e.target.value)}>
-                            <option value="default">Default</option>
+                            <option value="default">Dashboard</option>
                             <option value="emptyState">Log in</option>
                         </Select>
                     </FormControl>
