@@ -24,7 +24,7 @@ let node: FrameNode | TextNode;
 
 const defaultTheme = figma.editorType === 'figjam' ? 'light' : 'dark'
 
-figma.showUI(__html__, { height: 800, width: 1260 });
+figma.showUI(__html__, { height: 800, width: 1500 });
 figma.ui.postMessage({ type: 'default-theme', theme: defaultTheme });
 
 figma.ui.onmessage = async (msg) => {

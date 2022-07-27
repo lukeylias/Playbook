@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 import {Button} from '@chakra-ui/button';
-import {Divider, Flex, Stack, VStack, HStack, Spacer, Container} from '@chakra-ui/layout';
+import {Divider, Flex, Stack, VStack, Spacer, Container} from '@chakra-ui/layout';
 import {Radio, RadioGroup} from '@chakra-ui/radio';
 import {Select} from '@chakra-ui/select';
 import {FormControl, FormLabel} from '@chakra-ui/form-control';
-import {Image, Text, Center, Link, Heading, Box, Icon} from '@chakra-ui/react';
+import {Text, Link, Heading, Box, Tag} from '@chakra-ui/react';
 
 //
-// values for images
+// values for images and copy
 //
 const MAP = {
     default: {
@@ -21,7 +21,7 @@ const MAP = {
     emptyState: {
         ios: 'https://iili.io/hcawFf.png',
         android: 'https://iili.io/8SC2ON.png',
-        web: 'https://iili.io/8SC2ON.png',
+        web: 'https://iili.io/S7SR87.png',
         copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
     },
 };
@@ -41,10 +41,6 @@ const App = ({}) => {
         console.log('updated from hook', pattern, platform);
     }, [pattern, platform]);
 
-    //
-    // here we will send a message to controller.ts
-    //
-
     const imageStyle = {
         height: '716px',
         width: 'auto',
@@ -52,7 +48,7 @@ const App = ({}) => {
     };
 
     const onCreate = () => {
-        console.log('image changed');
+        console.log('updated from hook', pattern, platform);
     };
 
     //
@@ -105,7 +101,7 @@ const App = ({}) => {
             </Flex>
 
             {/* Right panel */}
-            <Flex bg="#F9FBFC" h="100%" w="70vw" p={6} overflowX={'scroll'} alignItems={'center'}>
+            <Flex bg="#E8ECEE" h="100%" w="70vw" p={6} overflowX={'scroll'} alignItems={'center'}>
                 <img style={imageStyle} src={image} />
             </Flex>
         </Flex>
