@@ -1,11 +1,11 @@
 import * as React from 'react';
-
 import {Button} from '@chakra-ui/button';
 import {Divider, Flex, Stack, VStack, Spacer, Container} from '@chakra-ui/layout';
 import {Radio, RadioGroup} from '@chakra-ui/radio';
 import {Select} from '@chakra-ui/select';
 import {FormControl, FormLabel} from '@chakra-ui/form-control';
 import {Text, Link, Heading, Box, Tag} from '@chakra-ui/react';
+import {useEffect, useState} from 'react';
 
 //
 // values for images and copy
@@ -30,12 +30,12 @@ const MAP = {
 // states and values
 //
 const App = ({}) => {
-    const [pattern, setPattern] = React.useState('default');
-    const [platform, setPlatform] = React.useState('ios');
-    const [image, setImage] = React.useState('https://iili.io/84DbY7.png');
-    const [link] = React.useState('https://www.youtube.com/watch?v=Zo_k6l6mwdo');
+    const [pattern, setPattern] = useState('default');
+    const [platform, setPlatform] = useState('ios');
+    const [image, setImage] = useState('https://iili.io/84DbY7.png');
+    const [link] = useState('https://www.youtube.com/watch?v=Zo_k6l6mwdo');
 
-    React.useEffect(() => {
+    useEffect(() => {
         const newImage = MAP[pattern][platform];
         setImage(newImage);
         console.log('updated from hook', pattern, platform);
@@ -101,7 +101,15 @@ const App = ({}) => {
             </Flex>
 
             {/* Right panel */}
-            <Flex bg="#E8ECEE" h="100%" w="70vw" p={6} overflowX={'scroll'} alignItems={'center'}>
+            <Flex
+                bg="#E8ECEE"
+                h="100%"
+                w="70vw"
+                p={6}
+                overflowX={'scroll'}
+                alignItems={'center'}
+                justifyContent={pattern === 'emptyState' ? 'unset' : 'center'}
+            >
                 <img style={imageStyle} src={image} />
             </Flex>
         </Flex>
