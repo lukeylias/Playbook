@@ -12,16 +12,26 @@ import {useEffect, useState} from 'react';
 //
 const MAP = {
     default: {
-        ios: 'https://iili.io/84Dmv9.png',
-        android: 'https://iili.io/84DbY7.png',
-        web: 'https://iili.io/84b7aI.png',
+        ios: {
+            image: 'https://iili.io/84Dmv9.png',
+            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+        },
+        android: {
+            image: 'https://iili.io/84DbY7.png',
+            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+        },
+        // web: 'https://iili.io/84b7aI.png',
         copy: 'The dashboard shows all the customers accounts and is the home of the app.',
     },
 
     emptyState: {
-        ios: 'https://iili.io/hcawFf.png',
-        android: 'https://iili.io/8SC2ON.png',
-        web: 'https://iili.io/S7SR87.png',
+        ios: {
+            image: 'https://iili.io/84Dmv9.png',
+            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+        },
+        //     ios: 'https://iili.io/hcawFf.png',
+        //     android: 'https://iili.io/8SC2ON.png',
+        //     web: 'https://iili.io/S7SR87.png',
         copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
     },
 };
@@ -36,7 +46,7 @@ const App = ({}) => {
     const [link] = useState('https://www.youtube.com/watch?v=Zo_k6l6mwdo');
 
     useEffect(() => {
-        const newImage = MAP[pattern][platform];
+        const newImage = MAP[pattern][platform].image;
         setImage(newImage);
         console.log('updated from hook', pattern, platform);
     }, [pattern, platform]);
@@ -48,6 +58,7 @@ const App = ({}) => {
     };
 
     const onCreate = () => {
+        parent.postMessage({pluginMessage: {componentId: MAP[pattern][platform].key}}, '*');
         console.log('updated from hook', pattern, platform);
     };
 
