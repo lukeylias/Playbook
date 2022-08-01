@@ -1,6 +1,6 @@
 
 // This is the UI panel that is shown
-figma.showUI(__html__, { height: 800, width: 1400 });
+figma.showUI(__html__, { height: 800, width: 1500 });
 
 // This is the message that is sent from the frontend (App.tsx)
 figma.ui.onmessage = async (msg:{componentId: string}) => {

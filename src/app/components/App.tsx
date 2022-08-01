@@ -7,7 +7,7 @@ import {FormControl, FormLabel} from '@chakra-ui/form-control';
 import {Text, Link, Heading, Box, Icon} from '@chakra-ui/react';
 import {useEffect, useState} from 'react';
 import {HiOutlinePencil, HiOutlinePuzzle, HiOutlineBeaker, HiOutlineChat} from 'react-icons/hi';
-import * as logo from './iOS_dashboard.jpg';
+// import * as logo from './iOS_dashboard.jpg';
 
 //
 // values for images, keys and copy
@@ -15,7 +15,7 @@ import * as logo from './iOS_dashboard.jpg';
 const MAP = {
     default: {
         ios: {
-            image: './iOS_dashboard.jpg',
+            image: 'https://iili.io/84DbY7.png',
             key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
         },
         android: {
@@ -23,7 +23,7 @@ const MAP = {
             key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
         },
         web: {
-            image: 'https://iili.io/84b7aI.png',
+            image: 'https://i.ibb.co/b1pdhwq/web-dashboard.jpg',
             key: '7942c0879b87578e74e44cce306af1f306e170ac',
         },
         copy: 'The dashboard shows all the customers accounts and is the home of the app.',
@@ -184,6 +184,7 @@ const App = ({}) => {
                 overflowX={'scroll'}
                 alignItems={'center'}
                 // justifyContent={pattern === 'emptyState' ? 'unset' : 'center'}
+                justifyContent={'unset'}
             >
                 <img style={imageStyle} src={image} />
             </Flex>
