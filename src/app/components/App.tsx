@@ -16,97 +16,97 @@ const MAP = {
     default: {
         ios: {
             image: 'https://i.ibb.co/NsDWkj1/ios-default.png',
-            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+            key: 'a025de2b23fb66f31948ff346fd0c6c66fffc747',
         },
         android: {
             image: 'https://i.ibb.co/hmH8yNx/android-default.png',
-            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+            key: '98e08f44175c465a4d91f98702f1ac7976878979',
         },
         web: {
             image: 'https://i.ibb.co/19Wtrc0/web-default.png',
-            key: '7942c0879b87578e74e44cce306af1f306e170ac',
+            key: 'bc30f1232ae986a17a066457dc3f5d75aeea3587',
         },
-        copy: 'The dashboard shows all the customers accounts and is the home of the app.',
+        copy: 'A screen with a handful of components ready for you to kick off your designs.',
     },
 
     signIn: {
         ios: {
             image: 'https://i.ibb.co/G0kxWCL/ios-sign-In.png',
-            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+            key: 'cf94bcadba4b238cfb74d5e6c3f2cd0a9b912aa5',
         },
         android: {
             image: 'https://i.ibb.co/FnFwqpV/android-sign-In.png',
-            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+            key: 'd1052f8105bdce4cf5fafd944476cb38ca856be7',
         },
         web: {
             image: 'https://i.ibb.co/dBtfXrw/web-sign-In.png',
-            key: '',
+            key: 'd35b9d9f95b1842c68302089a4b9021d52c6dba1',
         },
-        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+        copy: 'Sign in is the area where our customers enter in their username and password or biometrics to access internet banking.',
     },
 
     dashboard: {
         ios: {
             image: 'https://i.ibb.co/Z2x6W7K/ios-dashboard.png',
-            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+            key: 'cbf179359fbcc8f5f78565072f3052b88c57d5d8',
         },
         android: {
             image: 'https://i.ibb.co/grFcSzt/android-dashboard.png',
-            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+            key: '7b06921ec016e38e6a5645543f760acb72b5845b',
         },
         web: {
             image: 'https://i.ibb.co/sRnYpjz/web-dashboard.png',
-            key: '',
+            key: '4f1d73de56e72b452078041add8a51f0a5c64f61',
         },
-        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+        copy: 'The home of our app which displays customer accounts and various other actions',
     },
 
     accounts: {
         ios: {
             image: 'https://i.ibb.co/TkqG33R/ios-account.png',
-            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+            key: '9e6838ee74cae390ef04f8b3ee87bce54ae83f53',
         },
         android: {
             image: 'https://i.ibb.co/Zf9908Y/android-accounts.png',
-            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+            key: '02169dc6b2e03c540a6ecbaef5308f588a7855ea',
         },
         web: {
             image: 'https://i.ibb.co/r3f4YWD/web-account.png',
-            key: '',
+            key: '83cc87a757ad213f5df941d9d08801627714892b',
         },
-        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+        copy: 'Ultimate access account added for testing to see the UI which is standard across our accounts (except loans which is slightly different).',
     },
 
     messaging: {
         ios: {
             image: 'https://i.ibb.co/GFbJ8vG/ios-messages.png',
-            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+            key: 'de73e1db9a63fb7db0ae49e2e42147cc13a80d8a',
         },
         android: {
             image: 'https://i.ibb.co/L1CgCVJ/android-messages.png',
-            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+            key: '0ed3778b78ae08544e098d7477b8dca757d60897',
         },
         web: {
             image: 'https://i.ibb.co/V3gKGSC/web-secure-Messaging.png',
             key: 'f23241aa1777da62abfb94d5ef3fb314f18b1105',
         },
-        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+        copy: 'Secure messaging is the message service where customers can send a message in regards to anything to GB and we can respond in that channel. Indications of new replies are handle solely with this feature.',
     },
 
     notifications: {
         ios: {
             image: 'https://i.ibb.co/z8r8dBW/ios-notifications.png',
-            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+            key: '798a09fe169e3d62a2a4465e168ba7e5b5fe1b79',
         },
         android: {
             image: 'https://i.ibb.co/RhcQyqJ/android-notifications.png',
-            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+            key: 'd953251c9c01ccf6be64028b3602dd5d9f8f9fc9',
         },
         web: {
             image: 'https://i.ibb.co/yyKpTLK/web-notifications.png',
-            key: '',
+            key: 'ae3ab8df22f6972b4bd42dc57a4ba0d0eb9ca9ca',
         },
-        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+        copy: 'Notifications is where we can notify the customer about different things happening on their account. Things such as, (They have a card to activate, Theres been a failed payment, Upcoming scheduled maintenance.)',
     },
 };
 
