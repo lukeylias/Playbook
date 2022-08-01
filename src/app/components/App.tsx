@@ -15,31 +15,95 @@ import {HiOutlinePencil, HiOutlinePuzzle, HiOutlineBeaker, HiOutlineChat} from '
 const MAP = {
     default: {
         ios: {
-            image: 'https://iili.io/84DbY7.png',
+            image: 'https://i.ibb.co/NsDWkj1/ios-default.png',
             key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
         },
         android: {
-            image: 'https://iili.io/84DbY7.png',
+            image: 'https://i.ibb.co/hmH8yNx/android-default.png',
             key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
         },
         web: {
-            image: 'https://i.ibb.co/b1pdhwq/web-dashboard.jpg',
+            image: 'https://i.ibb.co/19Wtrc0/web-default.png',
             key: '7942c0879b87578e74e44cce306af1f306e170ac',
         },
         copy: 'The dashboard shows all the customers accounts and is the home of the app.',
     },
 
-    emptyState: {
+    signIn: {
         ios: {
-            image: 'https://iili.io/hcawFf.png',
+            image: 'https://i.ibb.co/G0kxWCL/ios-sign-In.png',
             key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
         },
         android: {
-            image: 'https://iili.io/8SC2ON.png',
+            image: 'https://i.ibb.co/FnFwqpV/android-sign-In.png',
             key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
         },
         web: {
-            image: 'https://iili.io/S7SR87.png',
+            image: 'https://i.ibb.co/dBtfXrw/web-sign-In.png',
+            key: '',
+        },
+        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+    },
+
+    dashboard: {
+        ios: {
+            image: 'https://i.ibb.co/Z2x6W7K/ios-dashboard.png',
+            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+        },
+        android: {
+            image: 'https://i.ibb.co/grFcSzt/android-dashboard.png',
+            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+        },
+        web: {
+            image: 'https://i.ibb.co/sRnYpjz/web-dashboard.png',
+            key: '',
+        },
+        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+    },
+
+    accounts: {
+        ios: {
+            image: 'https://i.ibb.co/TkqG33R/ios-account.png',
+            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+        },
+        android: {
+            image: 'https://i.ibb.co/Zf9908Y/android-accounts.png',
+            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+        },
+        web: {
+            image: 'https://i.ibb.co/r3f4YWD/web-account.png',
+            key: '',
+        },
+        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+    },
+
+    messaging: {
+        ios: {
+            image: 'https://i.ibb.co/GFbJ8vG/ios-messages.png',
+            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+        },
+        android: {
+            image: 'https://i.ibb.co/L1CgCVJ/android-messages.png',
+            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+        },
+        web: {
+            image: 'https://i.ibb.co/V3gKGSC/web-secure-Messaging.png',
+            key: 'f23241aa1777da62abfb94d5ef3fb314f18b1105',
+        },
+        copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
+    },
+
+    notifications: {
+        ios: {
+            image: 'https://i.ibb.co/z8r8dBW/ios-notifications.png',
+            key: '1ae99ff96abb3fde3ca3cd9585c804361c88df68',
+        },
+        android: {
+            image: 'https://i.ibb.co/RhcQyqJ/android-notifications.png',
+            key: '45e63e28d53c29c87addc3b7e6c1dc56e88f6bd0',
+        },
+        web: {
+            image: 'https://i.ibb.co/yyKpTLK/web-notifications.png',
             key: '',
         },
         copy: 'Log in is the area where our customers enter in their username and password to access internet banking.',
@@ -99,8 +163,12 @@ const App = ({}) => {
                     <FormControl>
                         <FormLabel>Pattern</FormLabel>
                         <Select size="md" onChange={(e) => setPattern(e.target.value)}>
-                            <option value="default">Dashboard</option>
-                            <option value="emptyState">Log in</option>
+                            <option value="default">Default</option>
+                            <option value="signIn">Sign in</option>
+                            <option value="dashboard">Dashboard</option>
+                            <option value="accounts">Accounts</option>
+                            <option value="messaging">Secure messaging</option>
+                            <option value="notifications">Notifications</option>
                         </Select>
                     </FormControl>
 
