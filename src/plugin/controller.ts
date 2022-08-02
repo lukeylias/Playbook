@@ -15,17 +15,23 @@ figma.ui.onmessage = async (msg:{componentId: string}) => {
     page.insertChild(0,component)
 
     // The viewport scrolls and zooms the new component into view
-    // figma.viewport.scrollAndZoomIntoView([component]);
     const bounds = figma.viewport.bounds;
 
     component.x = bounds.x + bounds.width / 2 - component.width / 2;
     component.y = bounds.y + bounds.height / 2 - component.height / 2;
 
+    figma.viewport.scrollAndZoomIntoView([component]);
+
     // Detaches instance to make it just a frame / frames
     component.detachInstance()
 
     // Shows toast down the bottom of the screen
-    figma.notify("Screens created 🤘")
+    figma.notify("Screens created 🎉")
+
+
+    figma.closePlugin()
+
+    
     
 };
 
