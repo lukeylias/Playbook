@@ -61,6 +61,22 @@ const MAP = {
         copy: 'The home of our app which displays customer accounts and various other actions',
     },
 
+    openAccount: {
+        ios: {
+            image: 'https://i.ibb.co/vBVPQfp/ios-open-bonus-saver.png',
+            key: '845ec988335227001962828d0b793dadf48c21a8',
+        },
+        android: {
+            image: 'https://i.ibb.co/FHr5Qwn/open-bonus-saver.png',
+            key: '4d852692deb65eca9ef032a188b48d62bdb7b035',
+        },
+        web: {
+            image: 'https://i.ibb.co/nQFW1GQ/open-bonus-saver.jpg',
+            key: 'e1b017fe6fbd3221f5f3f2181aef7f7d145d24e4',
+        },
+        copy: 'This is the workflow for opening or Bonus Saver account. These accounts dont allow for cards.',
+    },
+
     accounts: {
         ios: {
             image: 'https://i.ibb.co/TkqG33R/ios-account.png',
@@ -166,6 +182,7 @@ const App = ({}) => {
                             <option value="default">Default</option>
                             <option value="signIn">Sign in</option>
                             <option value="dashboard">Dashboard</option>
+                            <option value="openAccount">Open account – Bonus Saver</option>
                             <option value="accounts">Accounts</option>
                             <option value="messaging">Secure messaging</option>
                             <option value="notifications">Notifications</option>
